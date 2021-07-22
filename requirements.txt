@@ -1,6 +1,6 @@
 fastapi[all]
-coverage
 uvicorn
+coverage
 behave
 requests
 heroku

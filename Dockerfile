@@ -17,6 +17,6 @@ RUN pip install -r requirements.txt
 COPY . .
 
 #Ejecutar la ap;icación
-CMD uvicorn --host 0.0.0.0 --port $PORT API:app
+CMD uvicorn --host 0.0.0.0 --port $PORT ApiCalc:app
 
-# CMD python API.py
+#CMD python ApiCalc.py
