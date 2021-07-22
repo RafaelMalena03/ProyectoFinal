@@ -89,5 +89,5 @@ jobs:
           # Your Heroku API Key
           api_key: ${{ secrets.API_KEY_HEROKU }}
           # Your Heroku App Name
-          app_name: ${{ secrets.API_KEY_HEROKU }}
+          app_name: ${{ secrets.APP_NAME_HEROKU }}
 
