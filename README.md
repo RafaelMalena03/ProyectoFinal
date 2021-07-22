@@ -11,7 +11,7 @@ Estrategia de 2 ramas.
                 -Los checks de los jobs (Workflows) no reportan errores.
                 -Se han hecho 6 revisiones al el pull request.
                 -Analisis de código de Codacy no reporta errores
-    - Rama features permite completar pull request de dorma libre.
+    - Rama actualizaciones permite completar pull request de dorma libre.
     
 ## Otros proyectos de la materia
     -  (Borrar esto y poner los enlaces de los repositorios)
