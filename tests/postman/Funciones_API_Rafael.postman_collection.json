@@ -1,35 +1,28 @@
 {
 	"info": {
-		"_postman_id": "34a010ec-bd02-484f-a6f8-ed227975f6be",
-		"name": "Calculadora_test",
+		"_postman_id": "e3d4da85-a3ea-4652-88c9-c0a0d9f6bba9",
+		"name": "Funciones_API_Rafael",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Read Root",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"  pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/",
+					"raw": "{{baseUrl}}/?",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
 					]
 				}
 			},
@@ -70,15 +63,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Validar resultado\", function (){\r",
-							"    // var total = \"El resultado de la operacion es \"\r",
-							"    var jsonData = pm.response.json()\r",
-							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
-							"})"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -88,7 +80,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/sumar?num1={{num1}}&num2={{num2}}",
+					"raw": "{{baseUrl}}/sumar?num1=4&num2=14",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -98,11 +90,11 @@
 					"query": [
 						{
 							"key": "num1",
-							"value": "{{num1}}"
+							"value": "4"
 						},
 						{
 							"key": "num2",
-							"value": "{{num2}}"
+							"value": "14"
 						}
 					]
 				}
@@ -180,7 +172,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"magna elit aliquip occaecat mollit\",\n    \"tempor et aliqua\"\n   ],\n   \"msg\": \"cupidatat s\",\n   \"type\": \"nulla nisi do\"\n  },\n  {\n   \"loc\": [\n    \"aliquip Lorem nostrud\",\n    \"non ad\"\n   ],\n   \"msg\": \"anim\",\n   \"type\": \"mollit officia\"\n  }\n ]\n}"
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"eu proident\",\n    \"irure tempor in Duis\"\n   ],\n   \"msg\": \"nisi exercitation sint Duis\",\n   \"type\": \"do\"\n  },\n  {\n   \"loc\": [\n    \"velit est\",\n    \"fugiat adipisicing\"\n   ],\n   \"msg\": \"enim dolor quis voluptate\",\n   \"type\": \"offic\"\n  }\n ]\n}"
 				}
 			]
 		},
@@ -191,15 +183,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Validar resultado\", function (){\r",
-							"    // var total = \"El resultado de la operacion es \"\r",
-							"    var jsonData = pm.response.json()\r",
-							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
-							"})"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -301,7 +292,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"sit\",\n    \"tempor\"\n   ],\n   \"msg\": \"Ut reprehenderit proident\",\n   \"type\": \"do est\"\n  },\n  {\n   \"loc\": [\n    \"aute sed fugiat in laboris\",\n    \"enim culpa Duis ea\"\n   ],\n   \"msg\": \"labori\",\n   \"type\": \"laboris sint sit\"\n  }\n ]\n}"
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"et commodo dolore nisi proident\",\n    \"in sint adipisicing laboris\"\n   ],\n   \"msg\": \"commodo sint culpa est in\",\n   \"type\": \"Lorem ut\"\n  },\n  {\n   \"loc\": [\n    \"Duis proident dolor\",\n    \"cupidatat dolor\"\n   ],\n   \"msg\": \"labore veniam sint\",\n   \"type\": \"ex veniam\"\n  }\n ]\n}"
 				}
 			]
 		},
@@ -312,15 +303,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Validar resultado\", function (){\r",
-							"    // var total = \"El resultado de la operacion es \"\r",
-							"    var jsonData = pm.response.json()\r",
-							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
-							"})"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -422,7 +412,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"sit\",\n    \"tempor\"\n   ],\n   \"msg\": \"Ut reprehenderit proident\",\n   \"type\": \"do est\"\n  },\n  {\n   \"loc\": [\n    \"aute sed fugiat in laboris\",\n    \"enim culpa Duis ea\"\n   ],\n   \"msg\": \"labori\",\n   \"type\": \"laboris sint sit\"\n  }\n ]\n}"
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"et commodo dolore nisi proident\",\n    \"in sint adipisicing laboris\"\n   ],\n   \"msg\": \"commodo sint culpa est in\",\n   \"type\": \"Lorem ut\"\n  },\n  {\n   \"loc\": [\n    \"Duis proident dolor\",\n    \"cupidatat dolor\"\n   ],\n   \"msg\": \"labore veniam sint\",\n   \"type\": \"ex veniam\"\n  }\n ]\n}"
 				}
 			]
 		},
@@ -433,15 +423,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Validar resultado\", function (){\r",
-							"    // var total = \"El resultado de la operacion es \"\r",
-							"    var jsonData = pm.response.json()\r",
-							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
-							"})"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -449,18 +438,7 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "num1",
-						"value": "{{num1}}",
-						"type": "text"
-					},
-					{
-						"key": "num2",
-						"value": "{{num2}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
 					"raw": "{{baseUrl}}/dividir?num1={{num1}}&num2={{num2}}",
 					"host": [
@@ -554,26 +532,25 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"sit\",\n    \"tempor\"\n   ],\n   \"msg\": \"Ut reprehenderit proident\",\n   \"type\": \"do est\"\n  },\n  {\n   \"loc\": [\n    \"aute sed fugiat in laboris\",\n    \"enim culpa Duis ea\"\n   ],\n   \"msg\": \"labori\",\n   \"type\": \"laboris sint sit\"\n  }\n ]\n}"
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"et commodo dolore nisi proident\",\n    \"in sint adipisicing laboris\"\n   ],\n   \"msg\": \"commodo sint culpa est in\",\n   \"type\": \"Lorem ut\"\n  },\n  {\n   \"loc\": [\n    \"Duis proident dolor\",\n    \"cupidatat dolor\"\n   ],\n   \"msg\": \"labore veniam sint\",\n   \"type\": \"ex veniam\"\n  }\n ]\n}"
 				}
 			]
 		},
 		{
-			"name": "PruebaGeneral",
+			"name": "Formato general",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Validar resultado\", function (){\r",
-							"    // var total = \"El resultado de la operacion es \"\r",
-							"    var jsonData = pm.response.json()\r",
-							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
-							"})"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -583,12 +560,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/{{operacion}}?num1={{num1}}&num2={{num2}}",
+					"raw": "{{baseUrl}}/{{funcion}}?num1={{num1}}&num2={{num2}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"{{operacion}}"
+						"{{funcion}}"
 					],
 					"query": [
 						{
