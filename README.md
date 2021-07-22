@@ -8,9 +8,11 @@
 ## Estrategia de ramas utilizadas
 Estrategia de 2 ramas. 
     - Rama main permite completar pull request si:
+    ```
                 -Los checks de los jobs (Workflows) no reportan errores.
                 -Se han hecho 6 revisiones al el pull request.
                 -Analisis de código de Codacy no reporta errores
+    ```
     - Rama features permite completar pull request de dorma libre.
     
 ## Otros proyectos de la materia
@@ -44,3 +46,6 @@ behave tests/Integracion
 ```
 ## Correr el Api en la web de heroku
 https://proyecto-final-1086965.herokuapp.com/
+
+## Alumno + Id
+Rafael David Melena 1075534
