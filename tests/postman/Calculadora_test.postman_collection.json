@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "34a010ec-bd02-484f-a6f8-ed227975f6be",
+		"name": "Calculadora_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Read Root",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "Read Sumar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    // var total = \"El resultado de la operacion es \"\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/sumar?num1={{num1}}&num2={{num2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sumar"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "{{num1}}"
+						},
+						{
+							"key": "num2",
+							"value": "{{num2}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sumar?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sumar"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sumar?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sumar"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"magna elit aliquip occaecat mollit\",\n    \"tempor et aliqua\"\n   ],\n   \"msg\": \"cupidatat s\",\n   \"type\": \"nulla nisi do\"\n  },\n  {\n   \"loc\": [\n    \"aliquip Lorem nostrud\",\n    \"non ad\"\n   ],\n   \"msg\": \"anim\",\n   \"type\": \"mollit officia\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Restar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    // var total = \"El resultado de la operacion es \"\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/restar?num1={{num1}}&num2={{num2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"restar"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "{{num1}}"
+						},
+						{
+							"key": "num2",
+							"value": "{{num2}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/restar?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"restar"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/restar?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"restar"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"sit\",\n    \"tempor\"\n   ],\n   \"msg\": \"Ut reprehenderit proident\",\n   \"type\": \"do est\"\n  },\n  {\n   \"loc\": [\n    \"aute sed fugiat in laboris\",\n    \"enim culpa Duis ea\"\n   ],\n   \"msg\": \"labori\",\n   \"type\": \"laboris sint sit\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Multiplicar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    // var total = \"El resultado de la operacion es \"\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/multiplicar?num1={{num1}}&num2={{num2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"multiplicar"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "{{num1}}"
+						},
+						{
+							"key": "num2",
+							"value": "{{num2}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/multiplicar?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"multiplicar"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/multiplicar?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"multiplicar"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"sit\",\n    \"tempor\"\n   ],\n   \"msg\": \"Ut reprehenderit proident\",\n   \"type\": \"do est\"\n  },\n  {\n   \"loc\": [\n    \"aute sed fugiat in laboris\",\n    \"enim culpa Duis ea\"\n   ],\n   \"msg\": \"labori\",\n   \"type\": \"laboris sint sit\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Dividir",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    // var total = \"El resultado de la operacion es \"\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "num1",
+						"value": "{{num1}}",
+						"type": "text"
+					},
+					{
+						"key": "num2",
+						"value": "{{num2}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/dividir?num1={{num1}}&num2={{num2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dividir"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "{{num1}}"
+						},
+						{
+							"key": "num2",
+							"value": "{{num2}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dividir?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dividir"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dividir?num1=0&num2=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dividir"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "0"
+								},
+								{
+									"key": "num2",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"sit\",\n    \"tempor\"\n   ],\n   \"msg\": \"Ut reprehenderit proident\",\n   \"type\": \"do est\"\n  },\n  {\n   \"loc\": [\n    \"aute sed fugiat in laboris\",\n    \"enim culpa Duis ea\"\n   ],\n   \"msg\": \"labori\",\n   \"type\": \"laboris sint sit\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "PruebaGeneral",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validar resultado\", function (){\r",
+							"    // var total = \"El resultado de la operacion es \"\r",
+							"    var jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData[\"El resultado de la operacion es \"]).to.eql(pm.iterationData.get(\"result\"))\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{operacion}}?num1={{num1}}&num2={{num2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{operacion}}"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "{{num1}}"
+						},
+						{
+							"key": "num2",
+							"value": "{{num2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

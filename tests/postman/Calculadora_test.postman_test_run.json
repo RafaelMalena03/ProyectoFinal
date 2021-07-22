@@ -1,0 +1,149 @@
+{
+	"id": "55c469a5-02fa-4362-9def-9bf7379281b9",
+	"name": "Calculadora_test",
+	"timestamp": "2021-07-21T00:30:15.225Z",
+	"collection_id": "11045247-34a010ec-bd02-484f-a6f8-ed227975f6be",
+	"folder_id": 0,
+	"environment_id": "c5168f1c-292b-414f-b74d-fb56ffe9455a",
+	"totalPass": 40,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "89a644e6-d333-4aa9-a082-6b5ee0dfe183",
+			"name": "PruebaGeneral",
+			"time": 65,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validar resultado": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 20,
+					"fail": 0
+				},
+				"Validar resultado": {
+					"pass": 20,
+					"fail": 0
+				}
+			},
+			"times": [
+				394,
+				76,
+				88,
+				75,
+				91,
+				90,
+				104,
+				103,
+				92,
+				94,
+				80,
+				81,
+				88,
+				89,
+				81,
+				98,
+				98,
+				78,
+				77,
+				65
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				},
+				{
+					"Status code is 200": true,
+					"Validar resultado": true
+				}
+			]
+		}
+	],
+	"count": 20,
+	"totalTime": 2042,
+	"collection": {
+		"requests": [
+			{
+				"id": "89a644e6-d333-4aa9-a082-6b5ee0dfe183",
+				"method": "GET"
+			}
+		]
+	}
+}

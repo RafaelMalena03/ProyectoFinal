@@ -1,0 +1,29 @@
+{
+	"id": "c5168f1c-292b-414f-b74d-fb56ffe9455a",
+	"name": "Desarrollo",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "https://proyecto-final-1086965.herokuapp.com",
+			"enabled": true
+		},
+		{
+			"key": "num1",
+			"value": "num1",
+			"enabled": true
+		},
+		{
+			"key": "num2",
+			"value": "num2",
+			"enabled": true
+		},
+		{
+			"key": "operacion",
+			"value": "operacion",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-07-21T00:33:45.755Z",
+	"_postman_exported_using": "Postman/8.8.0"
+}

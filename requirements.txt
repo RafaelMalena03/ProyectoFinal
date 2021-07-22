@@ -1,0 +1,6 @@
+fastapi[all]
+coverage
+uvicorn
+behave
+requests
+heroku
