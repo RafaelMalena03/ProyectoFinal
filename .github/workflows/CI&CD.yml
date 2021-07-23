@@ -29,7 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Estudiante
-        run: echo Rafael David Melena 1075534
+        run: echo Rafael David Malena 1075534
         
       - name: Instalacion de dependencias
         uses: actions/setup-python@v2.2.2
