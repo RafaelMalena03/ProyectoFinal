@@ -17,8 +17,7 @@ Estrategia de 2 ramas.
     
 ## Otros proyectos de la materia
     -  https://github.com/rafaelm71/PRACTICA-HELLO-WORD.git
-    -  (Borrar esto y poner los enlaces de los repositorios)
-    -  (Borrar esto y poner los enlaces de los repositorios)
+    -  https://github.com/rafaelm71/DockerFile
  
 # Requisitos para correr la API
 - Docker
