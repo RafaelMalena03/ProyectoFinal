@@ -16,7 +16,7 @@ Estrategia de 2 ramas.
     - Rama features permite completar pull request de dorma libre.
     
 ## Otros proyectos de la materia
-    -  (Borrar esto y poner los enlaces de los repositorios)
+    -  https://github.com/rafaelm71/PRACTICA-HELLO-WORD.git
     -  (Borrar esto y poner los enlaces de los repositorios)
     -  (Borrar esto y poner los enlaces de los repositorios)
  
