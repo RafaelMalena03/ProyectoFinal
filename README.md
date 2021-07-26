@@ -16,8 +16,12 @@ Estrategia de 2 ramas.
     - Rama features permite completar pull request de dorma libre.
     
 ## Otros proyectos de la materia
+actualizaciones
    -  https://github.com/rafaelm71/PRACTICA-HELLO-WORD.git
    -  https://github.com/rafaelm71/DockerFile
+
+  
+main
  
 # Requisitos para correr la API
 - Docker
