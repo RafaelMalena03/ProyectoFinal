@@ -16,8 +16,12 @@ Estrategia de 2 ramas.
     - Rama features permite completar pull request de dorma libre.
     
 ## Otros proyectos de la materia
-    -  https://github.com/rafaelm71/PRACTICA-HELLO-WORD.git
-    -  https://github.com/rafaelm71/DockerFile
+actualizaciones
+   -  https://github.com/rafaelm71/PRACTICA-HELLO-WORD.git
+   -  https://github.com/rafaelm71/DockerFile
+
+  
+main
  
 # Requisitos para correr la API
 - Docker
@@ -48,3 +52,4 @@ https://proyecto-final-rafael.herokuapp.com
 
 ## Alumno + Id
 Rafael David Malena 1075534
+
