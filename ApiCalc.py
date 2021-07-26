@@ -6,9 +6,8 @@ calc = Operacion()
 
 @app.get("/")
 def read_root():
-    return {"Hola mundo"}
-    # Ojo, debo cambiar el return {"Hola mundo"} de arriba por el return de abajo:
-    # return {"Soy el estudiante: Rafael David Malena" : " y mi id es 1075534"}
+    return {"Soy el estudiante: Rafael David Malena" : " y mi id es 1075534"}
+    
 
 @app.get("/sumar")
 def read_sumar(num1: int = 0, num2: int = 0):
